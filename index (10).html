@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>لينكاتي</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ac:#1a6b5a;--bg:#f5f6f4;--card:#fff;--tx:#17201d;--mut:#6a7570;--bd:#e2e6e3;--soft:#eef2f0;--dg:#c0392b;--sh:0 1px 2px rgba(20,30,25,.05),0 6px 20px rgba(20,30,25,.06);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1311;--card:#181d1a;--tx:#eaf0ed;--mut:#8f9b95;--bd:#2a312d;--soft:#1f2622;--sh:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#0f1311;--card:#181d1a;--tx:#eaf0ed;--mut:#8f9b95;--bd:#2a312d;--soft:#1f2622;--sh:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Cairo,system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.55;min-height:100vh}
+.hero{position:relative;text-align:center;padding:56px 20px 40px;background:linear-gradient(160deg,var(--ac),color-mix(in srgb,var(--ac) 55%,#000));color:#fff;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:auto -10% -60px -10%;height:120px;background:var(--bg);border-radius:50% 50% 0 0}
+.av{width:84px;height:84px;margin:0 auto 14px;border-radius:26px;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:42px;backdrop-filter:blur(6px);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+h1{margin:0;font-size:30px;font-weight:800}
+.sub{margin:6px auto 0;max-width:520px;opacity:.9;font-size:16px}
+.main{max-width:900px;margin:-6px auto 0;padding:0 16px 80px;position:relative;z-index:1}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.search{flex:1;min-width:200px;padding:12px 16px;border:1px solid var(--bd);border-radius:14px;background:var(--card);color:var(--tx);font:inherit;box-shadow:var(--sh)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 6px;margin-bottom:12px;scrollbar-width:none}
+.chip{border:1px solid var(--bd);background:var(--card);color:var(--mut);padding:7px 15px;border-radius:99px;font:inherit;font-size:14px;cursor:pointer;white-space:nowrap}
+.chip.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.sec{font-size:13px;font-weight:700;color:var(--mut);margin:22px 4px 10px;letter-spacing:.2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.grid.list{grid-template-columns:1fr}
+.card{display:flex;align-items:center;gap:14px;padding:14px;background:var(--card);border:1px solid var(--bd);border-radius:16px;text-decoration:none;color:var(--tx);box-shadow:var(--sh);transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-2px);border-color:var(--ac)}
+.ic{flex:none;width:46px;height:46px;border-radius:13px;background:color-mix(in srgb,var(--ac) 14%,transparent);display:grid;place-items:center;font-size:23px;color:var(--ac);font-weight:700}
+.cb{min-width:0;flex:1}
+.ct{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cd{font-size:13px;color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cu{font-size:12px;color:var(--mut);direction:ltr;text-align:right;opacity:.8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.arr{color:var(--mut);font-size:18px}
+.empty{text-align:center;color:var(--mut);padding:50px 10px}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:10px 16px calc(24px + env(safe-area-inset-bottom,0px))}
+.fab{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;border:0;background:var(--tx);color:var(--bg);padding:12px 18px;border-radius:99px;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.25);display:none}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:30;display:none}
+.dr{position:fixed;top:0;bottom:0;left:0;width:min(460px,100%);background:var(--bg);z-index:31;display:none;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.3);padding-top:env(safe-area-inset-top,0px)}
+.dr.open,.ov.open{display:flex}
+.dh{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--bd);font-weight:800}
+.x{border:0;background:var(--soft);color:var(--tx);width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:16px}
+.tabs{display:flex;gap:6px;padding:10px 16px 0}
+.tab{flex:1;border:0;background:var(--soft);color:var(--mut);padding:9px;border-radius:10px;font:inherit;font-weight:600;cursor:pointer}
+.tab.on{background:var(--ac);color:#fff}
+.db{flex:1;overflow-y:auto;padding:16px calc(16px + env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) 16px}
+.pn{display:none}.pn.on{display:block}
+label{display:block;font-size:13px;font-weight:600;margin:12px 0 5px;color:var(--mut)}
+input,select{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:11px;background:var(--card);color:var(--tx);font:inherit}
+input[type=color]{height:42px;padding:3px}
+input[type=checkbox]{width:auto}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{border:0;border-radius:11px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer;background:var(--ac);color:#fff}
+.btn.g{background:var(--soft);color:var(--tx)}
+.btn.d{background:transparent;color:var(--dg);border:1px solid var(--bd)}
+.btn.s{padding:5px 10px;font-size:13px}
+.acts{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.li{display:flex;align-items:center;gap:8px;padding:10px;border:1px solid var(--bd);border-radius:12px;background:var(--card);margin-top:8px}
+.li .n{flex:1;min-width:0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.li small{display:block;color:var(--mut);font-weight:400}
+.hd{font-size:15px;font-weight:800;margin:22px 0 4px}
+.kp{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.k{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px}
+.k b{display:block;font-size:26px;font-weight:800;color:var(--ac)}
+.k span{font-size:13px;color:var(--mut)}
+.ch{display:flex;align-items:flex-end;gap:8px;height:130px;margin-top:10px;padding:10px;background:var(--card);border:1px solid var(--bd);border-radius:14px}
+.cl{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;font-size:11px;color:var(--mut)}
+.cl i{display:block;width:100%;max-width:34px;background:var(--ac);border-radius:6px 6px 0 0;min-height:2px}
+.tp{display:flex;justify-content:space-between;padding:9px 12px;background:var(--card);border:1px solid var(--bd);border-radius:11px;margin-top:6px;font-size:14px}
+.toast{position:fixed;bottom:calc(76px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:10px 18px;border-radius:12px;z-index:50;font-size:14px;display:none}
+.lg{color:var(--mut);font-size:12px;opacity:.7}
+.lm{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:min(380px,92%);background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:18px;z-index:31;display:none;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.lm.open{display:block}
+.err{color:var(--dg);font-size:13px;min-height:18px;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="hero"><div class="av" id="emoji">🔗</div><h1 id="ttl">لينكاتي</h1><p class="sub" id="sub"></p></div>
+<div class="main">
+  <div class="bar"><input class="search" id="q" placeholder="🔍 دوّر في اللينكات"></div>
+  <div class="chips" id="chips"></div>
+  <div id="list"></div>
+</div>
+<footer><span id="foot"></span><br><a href="#" id="lg" class="lg">دخول المالك</a></footer>
+
+<button class="fab" id="fab">⚙️ لوحة التحكم</button>
+<div class="ov" id="ov"></div>
+<div class="dr" id="dr">
+  <div class="dh"><span>لوحة التحكم</span><span><button class="x" id="lo" title="خروج">⏻</button> <button class="x" id="cl">✕</button></span></div>
+  <div class="tabs"><button class="tab on" data-t="links">اللينكات</button><button class="tab" data-t="site">الموقع</button><button class="tab" data-t="stats">الإحصائيات</button></div>
+  <div class="db">
+    <div class="pn on" id="p-links">
+      <div class="hd" id="ft">إضافة لينك</div>
+      <label>الاسم</label><input id="f-title" placeholder="مثلاً: قناتي على يوتيوب">
+      <label>اللينك</label><input id="f-url" dir="ltr" placeholder="https://...">
+      <label>وصف قصير (اختياري)</label><input id="f-desc">
+      <div class="r2"><div><label>القسم</label><input id="f-cat" placeholder="شغل، ترفيه..."></div><div><label>أيقونة (إيموجي)</label><input id="f-icon" placeholder="🎬"></div></div>
+      <div class="acts"><button class="btn" id="f-save">إضافة</button><button class="btn g" id="f-cancel" style="display:none">إلغاء</button></div>
+      <div class="hd">كل اللينكات</div>
+      <div id="manage"></div>
+    </div>
+    <div class="pn" id="p-site">
+      <label>اسم الموقع</label><input id="s-title">
+      <label>الوصف تحت الاسم</label><input id="s-sub">
+      <div class="r2"><div><label>أيقونة الموقع</label><input id="s-emoji"></div><div><label>اللون الأساسي</label><input id="s-accent" type="color"></div></div>
+      <div class="r2"><div><label>المظهر</label><select id="s-theme"><option value="auto">تلقائي</option><option value="light">فاتح</option><option value="dark">غامق</option></select></div><div><label>شكل العرض</label><select id="s-layout"><option value="grid">كروت</option><option value="list">قائمة</option></select></div></div>
+      <label>نص أسفل الصفحة</label><input id="s-footer">
+      <label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="s-search"> إظهار خانة البحث</label>
+      <div class="acts"><button class="btn" id="s-save">حفظ التعديلات</button></div>
+    </div>
+    <div class="pn" id="p-stats"><div id="stats"></div></div>
+  </div>
+</div>
+<div class="lm" id="lm"><div class="dh" style="padding:0 0 8px;border:0"><span>دخول المالك</span><button class="x" id="l-x">✕</button></div>
+<label>الإيميل</label><input id="l-mail" type="email" dir="ltr" autocomplete="username">
+<label>الباسورد</label><input id="l-pass" type="password" dir="ltr" autocomplete="current-password">
+<div class="err" id="l-err"></div>
+<div class="acts"><button class="btn" id="l-go">دخول</button><button class="btn g" id="l-reg" style="display:none">تسجيل أول مرة (أنا المالك)</button></div></div>
+<div class="toast" id="toast"></div>
+
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signInAnonymously,signOut} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import {getFirestore,doc,getDoc,setDoc,updateDoc,deleteDoc,addDoc,collection,onSnapshot} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+// ====== حط بيانات مشروعك هنا (Firebase Console > Project settings > Your apps > Web app) ======
+const firebaseConfig={
+  apiKey:"PUT_YOUR_API_KEY",
+  authDomain:"san-george-1.firebaseapp.com",
+  projectId:"san-george-1",
+  appId:"PUT_YOUR_APP_ID"
+};
+// =====================================================================================
+
+const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app);
+const DEF={title:"لينكاتي",sub:"كل اللينكات المهمة في مكان واحد",emoji:"🔗",accent:"#1a6b5a",theme:"auto",layout:"grid",footer:"",showSearch:true};
+let S={...DEF},links=[],visits=[],uid=null,owner=false,cat="الكل",editing=null,armed=null,chain=Promise.resolve(),unVisits=null,counted=false;
+const $=i=>document.getElementById(i);
+const D=p=>doc(db,p);
+function el(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function toast(m){const t=$('toast');t.textContent=m;t.style.display='block';clearTimeout(toast.h);toast.h=setTimeout(()=>t.style.display='none',2600)}
+function norm(u){u=(u||'').trim();if(!u)return'';if(!/^[a-z][a-z0-9+.-]*:/i.test(u))u='https://'+u;return/^(https?:|mailto:|tel:)/i.test(u)?u:''}
+function host(u){try{return new URL(u).host||u}catch(e){return u}}
+function dkey(ms){return new Date(ms).toISOString().slice(0,10)}
+
+function apply(){
+  document.title=S.title;$('ttl').textContent=S.title;$('sub').textContent=S.sub;$('emoji').textContent=S.emoji;
+  $('foot').textContent=S.footer||'';
+  document.documentElement.style.setProperty('--ac',S.accent);
+  if(S.theme==='auto')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',S.theme);
+  $('q').parentNode.style.display=S.showSearch?'':'none';
+  render();
+}
+function sorted(){return links.slice().sort((a,b)=>(a.order||a.created||0)-(b.order||b.created||0))}
+function render(){
+  const q=$('q').value.trim().toLowerCase(),all=sorted(),cats=['الكل'];
+  all.forEach(l=>{const c=l.cat||'عام';if(!cats.includes(c))cats.push(c)});
+  if(!cats.includes(cat))cat='الكل';
+  const ch=$('chips');ch.textContent='';
+  if(cats.length>2)cats.forEach(c=>{const b=el('button','chip'+(c===cat?' on':''),c);b.onclick=()=>{cat=c;render()};ch.appendChild(b)});
+  const box=$('list');box.textContent='';
+  const shown=all.filter(l=>(cat==='الكل'||(l.cat||'عام')===cat)&&(!q||((l.title||'')+' '+(l.desc||'')+' '+l.url+' '+(l.cat||'')).toLowerCase().includes(q)));
+  if(!shown.length){box.appendChild(el('div','empty',links.length?'مفيش نتايج':(owner?'لسه مفيش لينكات — افتح لوحة التحكم وضيف أول لينك':'لسه مفيش لينكات')));return}
+  const groups={},order=[];
+  shown.forEach(l=>{const c=l.cat||'عام';if(!groups[c]){groups[c]=[];order.push(c)}groups[c].push(l)});
+  order.forEach(c=>{
+    if(cat==='الكل'&&order.length>1)box.appendChild(el('div','sec',c));
+    const g=el('div','grid'+(S.layout==='list'?' list':''));
+    groups[c].forEach(l=>{
+      const a=el('a','card');a.href=l.url;a.target='_blank';a.rel='noopener noreferrer';
+      a.appendChild(el('div','ic',l.icon||(l.title||host(l.url)).charAt(0).toUpperCase()));
+      const b=el('div','cb');b.appendChild(el('div','ct',l.title||host(l.url)));
+      if(l.desc)b.appendChild(el('div','cd',l.desc));b.appendChild(el('div','cu',host(l.url)));
+      a.appendChild(b);a.appendChild(el('div','arr','↖'));
+      a.addEventListener('click',()=>track(l.id));
+      g.appendChild(a);
+    });
+    box.appendChild(g);
+  });
+}
+
+// تتبع الزيارات: مستند لكل زائر (تسجيل دخول مجهول)، والمالك مش بيتحسب
+function mutate(fn){
+  if(!uid||owner)return;
+  chain=chain.then(()=>getDoc(D('visits/'+uid)).then(s=>{
+    const d=s.exists()?s.data():{count:0,first:Date.now(),days:{},clicks:{}};
+    d.days=d.days||{};d.clicks=d.clicks||{};fn(d);return setDoc(D('visits/'+uid),d)})).catch(()=>{});
+}
+function track(id){mutate(d=>{d.clicks[id]=(d.clicks[id]||0)+1})}
+function countVisit(){
+  if(counted)return;counted=true;
+  try{if(sessionStorage.getItem('v1'))return;sessionStorage.setItem('v1','1')}catch(e){}
+  mutate(d=>{const k=dkey(Date.now());d.count=(d.count||0)+1;d.last=Date.now();d.days[k]=(d.days[k]||0)+1;
+    Object.keys(d.days).sort().slice(0,-60).forEach(x=>delete d.days[x])});
+}
+
+// لوحة التحكم
+function manage(){
+  const box=$('manage');box.textContent='';const all=sorted();
+  if(!all.length){box.appendChild(el('div','empty','مفيش لينكات لسه'));return}
+  all.forEach((l,i)=>{
+    const r=el('div','li');const n=el('div','n',(l.icon?l.icon+' ':'')+(l.title||host(l.url)));n.appendChild(el('small',null,(l.cat||'عام')+' · '+host(l.url)));r.appendChild(n);
+    const up=el('button','btn g s','↑'),dn=el('button','btn g s','↓'),ed=el('button','btn g s','تعديل'),dl=el('button','btn d s',armed===l.id?'تأكيد الحذف؟':'حذف');
+    up.onclick=()=>swap(all,i,i-1);dn.onclick=()=>swap(all,i,i+1);ed.onclick=()=>startEdit(l);
+    dl.onclick=()=>{if(armed===l.id){armed=null;deleteDoc(D('links/'+l.id)).then(()=>toast('اتحذف')).catch(()=>toast('حصلت مشكلة'))}else{armed=l.id;manage();setTimeout(()=>{if(armed===l.id){armed=null;manage()}},3000)}};
+    [up,dn,ed,dl].forEach(b=>r.appendChild(b));box.appendChild(r);
+  });
+}
+function swap(all,i,j){
+  if(j<0||j>=all.length)return;const a=all[i],b=all[j],oa=a.order||a.created||0;let ob=b.order||b.created||0;
+  if(oa===ob)ob=oa+(j>i?1:-1);
+  Promise.all([updateDoc(D('links/'+a.id),{order:ob}),updateDoc(D('links/'+b.id),{order:oa})]).catch(()=>toast('حصلت مشكلة'));
+}
+function startEdit(l){editing=l;$('f-title').value=l.title||'';$('f-url').value=l.url;$('f-desc').value=l.desc||'';$('f-cat').value=l.cat||'';$('f-icon').value=l.icon||'';
+  $('ft').textContent='تعديل لينك';$('f-save').textContent='حفظ التعديل';$('f-cancel').style.display='';$('p-links').parentNode.scrollTop=0}
+function resetForm(){editing=null;['f-title','f-url','f-desc','f-cat','f-icon'].forEach(i=>$(i).value='');
+  $('ft').textContent='إضافة لينك';$('f-save').textContent='إضافة';$('f-cancel').style.display='none'}
+function saveLink(){
+  const url=norm($('f-url').value);if(!url){toast('اكتب لينك صحيح');return}
+  const d={title:$('f-title').value.trim(),url,desc:$('f-desc').value.trim(),cat:$('f-cat').value.trim(),icon:$('f-icon').value.trim()};
+  let p;const was=!!editing;
+  if(editing){d.created=editing.created||Date.now();if(editing.order)d.order=editing.order;p=setDoc(D('links/'+editing.id),d)}
+  else{d.created=Date.now();d.order=d.created;p=addDoc(collection(db,'links'),d)}
+  $('f-save').disabled=true;
+  p.then(()=>{toast(was?'اتحفظ التعديل':'اتضاف اللينك');resetForm()}).catch(()=>toast('حصلت مشكلة في الحفظ')).finally(()=>$('f-save').disabled=false);
+}
+function fillSite(){$('s-title').value=S.title;$('s-sub').value=S.sub;$('s-emoji').value=S.emoji;$('s-accent').value=S.accent;
+  $('s-theme').value=S.theme;$('s-layout').value=S.layout;$('s-footer').value=S.footer||'';$('s-search').checked=!!S.showSearch}
+function saveSite(){
+  const d={title:$('s-title').value.trim()||DEF.title,sub:$('s-sub').value.trim(),emoji:$('s-emoji').value.trim()||DEF.emoji,accent:$('s-accent').value,
+    theme:$('s-theme').value,layout:$('s-layout').value,footer:$('s-footer').value.trim(),showSearch:$('s-search').checked};
+  setDoc(D('site/settings'),d).then(()=>toast('اتحفظت التعديلات')).catch(()=>toast('حصلت مشكلة في الحفظ'));
+}
+function stats(){
+  const box=$('stats');box.textContent='';let total=0,today=0;const tk=dkey(Date.now()),clicks={},days=[];
+  visits.forEach(v=>{total+=v.count||0;today+=(v.days||{})[tk]||0;Object.keys(v.clicks||{}).forEach(k=>clicks[k]=(clicks[k]||0)+v.clicks[k])});
+  const kp=el('div','kp');[[total,'إجمالي الزيارات'],[visits.length,'زوار مختلفين'],[today,'زيارات النهاردة'],[Object.values(clicks).reduce((s,x)=>s+x,0),'ضغطات على اللينكات']].forEach(x=>{
+    const k=el('div','k');k.appendChild(el('b',null,String(x[0])));k.appendChild(el('span',null,x[1]));kp.appendChild(k)});
+  box.appendChild(kp);box.appendChild(el('div','hd','آخر 7 أيام'));
+  let max=1;for(let i=6;i>=0;i--){const k=dkey(Date.now()-i*864e5);let n=0;visits.forEach(v=>n+=(v.days||{})[k]||0);days.push([k,n]);if(n>max)max=n}
+  const ch=el('div','ch');days.forEach(d=>{const c=el('div','cl');c.appendChild(el('span',null,String(d[1])));const b=document.createElement('i');b.style.height=Math.round(d[1]/max*85)+'%';c.appendChild(b);c.appendChild(el('span',null,d[0].slice(8)));ch.appendChild(c)});
+  box.appendChild(ch);box.appendChild(el('div','hd','أكتر اللينكات ضغطًا'));
+  const top=links.filter(l=>clicks[l.id]).sort((a,b)=>clicks[b.id]-clicks[a.id]).slice(0,8);
+  if(!top.length)box.appendChild(el('div','empty','لسه مفيش ضغطات'));
+  top.forEach(l=>{const r=el('div','tp');r.appendChild(el('span',null,l.title||host(l.url)));r.appendChild(el('b',null,String(clicks[l.id])));box.appendChild(r)});
+  box.appendChild(el('div','empty','زياراتك انت مش بتتحسب. الزائر بيتحسب مرة كل جلسة.'));
+}
+function openP(){fillSite();$('dr').classList.add('open');$('ov').classList.add('open')}
+function closeP(){$('dr').classList.remove('open');$('ov').classList.remove('open')}
+
+// تسجيل دخول المالك
+async function openLogin(){
+  $('lm').classList.add('open');$('ov').classList.add('open');$('l-reg').style.display='none';$('l-err').textContent='';
+  try{const s=await getDoc(D('config/owner'));if(!s.exists())$('l-reg').style.display=''}catch(e){}
+}
+function closeLogin(){$('lm').classList.remove('open');$('ov').classList.remove('open')}
+async function doLogin(){
+  $('l-err').textContent='';
+  try{await signInWithEmailAndPassword(auth,$('l-mail').value.trim(),$('l-pass').value);closeLogin()}
+  catch(e){$('l-err').textContent='الإيميل أو الباسورد غلط'}
+}
+async function doReg(){
+  $('l-err').textContent='';
+  try{
+    const c=await createUserWithEmailAndPassword(auth,$('l-mail').value.trim(),$('l-pass').value);
+    await setDoc(D('config/owner'),{uid:c.user.uid});closeLogin();toast('اتسجلت كمالك للموقع');
+  }catch(e){$('l-err').textContent=e&&e.code==='auth/weak-password'?'الباسورد ضعيف (6 حروف على الأقل)':'مقدرناش نسجل. ممكن يكون فيه مالك متسجل قبل كده.'}
+}
+
+$('q').oninput=render;$('fab').onclick=openP;$('cl').onclick=closeP;
+$('ov').onclick=()=>{closeP();closeLogin()};
+$('f-save').onclick=saveLink;$('f-cancel').onclick=resetForm;$('s-save').onclick=saveSite;
+$('lg').onclick=e=>{e.preventDefault();openLogin()};$('l-go').onclick=doLogin;$('l-reg').onclick=doReg;$('l-x').onclick=closeLogin;
+$('lo').onclick=()=>{closeP();signOut(auth)};
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));
+  ['links','site','stats'].forEach(t=>$('p-'+t).classList.toggle('on',t===b.dataset.t))});
+
+apply();
+$('list').appendChild(el('div','empty','جاري التحميل...'));
+
+// البيانات العامة (قراءة للجميع)
+onSnapshot(D('site/settings'),s=>{S={...DEF,...(s.exists()?s.data():{})};apply()},()=>{});
+onSnapshot(collection(db,'links'),s=>{
+  links=s.docs.map(d=>({...d.data(),id:d.id}));render();if(owner){manage();stats()}
+},()=>{$('list').textContent='';$('list').appendChild(el('div','empty','مقدرناش نحمّل اللينكات. اتأكد من قواعد Firestore وبيانات المشروع.'))});
+
+// حالة الدخول
+onAuthStateChanged(auth,async user=>{
+  if(!user){try{await signInAnonymously(auth)}catch(e){}return}
+  uid=user.uid;owner=false;
+  if(unVisits){unVisits();unVisits=null}
+  if(!user.isAnonymous){
+    try{const s=await getDoc(D('config/owner'));owner=s.exists()&&s.data().uid===user.uid}catch(e){}
+    if(!owner){await signOut(auth);return}
+  }
+  $('fab').style.display=owner?'block':'none';
+  $('lg').style.display=owner?'none':'';
+  if(owner){unVisits=onSnapshot(collection(db,'visits'),s=>{visits=s.docs.map(d=>d.data());stats()},()=>{});manage();stats()}
+  else countVisit();
+  render();
+});
+</script>
+</body>
+</html>
